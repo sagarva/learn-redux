@@ -37,6 +37,8 @@ store.dispatch(increment());
 store.dispatch(increment());
 store.dispatch(increment());
 store.dispatch(increment());
+store.dispatch(increment());
+store.dispatch(decrement());
 
 ReactDOM.render(
   <React.StrictMode>
