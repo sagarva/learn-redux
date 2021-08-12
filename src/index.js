@@ -6,7 +6,7 @@ import { createStore } from 'redux';
 
 
 //Store well the store is a place to store data as 
-let store= createStore(counter)
+
 //action
 const increment =()=> {
   return{
@@ -28,6 +28,15 @@ const counter =( state=0, action) => {
       return state-1;
       }
 }
+//store
+let store = createStore(counter)
+//to display our counter in the console window
+store.subscribe(() => console.log(store.getState())); //we are login the current state of our store
+//dispatcher
+store.dispatch(increment());
+store.dispatch(increment());
+store.dispatch(increment());
+store.dispatch(increment());
 
 ReactDOM.render(
   <React.StrictMode>
